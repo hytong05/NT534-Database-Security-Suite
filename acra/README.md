@@ -15,7 +15,7 @@ AcraServer sits between your application and your MySQL/PostgreSQL database and 
 
 ## Dataflows
 <p align="center">
-  <img src="src/dataflows.png" alt="dataflows" width="800"/>
+  <img src="../src/dataflows.png" alt="dataflows" width="800"/>
 </p>
 
 ---
