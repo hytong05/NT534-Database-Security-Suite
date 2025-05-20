@@ -1,0 +1,14 @@
+version: 0.96.0
+
+client_id: ""
+tls_client_id_cert: "acra_tls_certs/backend.crt.pem"
+keystore: v2
+keystore_encryption_type: env_master_key
+
+master_key_path: master.key
+
+generate_hmac_key: true
+generate_symmetric_storage_key: true
+
+keys_output_dir: .acrakeys
+keys_public_output_dir: .acrakeys

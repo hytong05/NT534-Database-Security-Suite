@@ -1,0 +1,64 @@
+version: 0.96.0
+defaults:
+  crypto_envelope: acrablock
+#  reencrypting_to_acrablocks: false
+schemas:
+  - table: "users"
+    columns:
+      - user_id
+      - username
+      - email
+      - full_name
+      - address
+      - phone_number
+      - created_at
+    encrypted:
+      - column: "username"
+        data_type: "str"
+        default_data_value: "error"
+#        masking: "***"
+#        plaintext_length: 1
+#        plaintext_side: "left"
+#        crypto_envelope: "acrastruct"
+      - column: "email"
+        data_type: "str"
+        default_data_value: "error"
+#        response_on_fail: ciphertext
+#        searchable: true
+      - column: "full_name"
+        data_type: "str"
+        default_data_value: "error"
+#        response_on_fail: ciphertext
+      - column: "address"
+        data_type: "str"
+        default_data_value: "error"
+#        response_on_fail: ciphertext
+      - column: "phone_number"
+        data_type: "str"
+        default_data_value: "error"
+#        response_on_fail: ciphertext
+#        masking: "X"
+#        plaintext_length: 4
+#        plaintext_side: "right"
+  - table: "orders"
+    columns:
+      - order_id
+      - user_id
+      - order_day
+      - total_amount
+      - status
+  - table: "order_details"
+    columns:
+      - order_detail_id
+      - order_id
+      - product_id
+      - quantity
+      - unit_price
+  - table: "products"
+    columns:
+      - product_id
+      - name
+      - description
+      - price
+      - stock_quantity
+      - created_at

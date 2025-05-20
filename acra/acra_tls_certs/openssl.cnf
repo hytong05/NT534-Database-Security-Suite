@@ -1,0 +1,38 @@
+[ req ]
+distinguished_name = req_dn
+req_extensions = v3_req
+prompt = no
+
+[ req_dn ]
+CN = 10.0.2.147
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+
+[ alt_names ]
+IP.1 = 10.0.2.147
+
+[ v3_ca ]
+basicConstraints = critical,CA:TRUE
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer
+subjectAltName = @alt_names
+
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+dir = .
+database = $dir/index.txt
+serial = $dir/serial
+new_certs_dir = $dir/newcerts
+certificate = $dir/ca.crt.pem
+private_key = $dir/ca.key.pem
+default_md = sha256
+default_crl_days = 30
+policy = policy_anything
+
+[ policy_anything ]
+commonName = supplied

@@ -1,0 +1,19 @@
+    encrypted:
+      - column: email
+        masking: "*"
+        plaintext_length: 1
+        plaintext_side: "left"
+
+      - column: email
+        searchable: true
+
+      - column: full_name
+        crypto_envelope: "acrablock"
+
+      - column: address
+        crypto_envelope: "acrablock"
+
+      - column: phone_number
+        masking: "XXX-XXX-"
+        plaintext_length: 4
+        plaintext_side: "right"
