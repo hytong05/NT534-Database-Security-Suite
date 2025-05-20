@@ -30,8 +30,8 @@ const pool = new Pool({
 
 // Middleware
 app.use(cors({
-  origin: 'http://10.0.2.148:8000', // Cho phép frontend từ port 8000
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  origin: 'http://10.0.2.148:8000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
@@ -90,6 +90,18 @@ const serverOptions = {
   cert: fs.readFileSync('certs/backend.crt.pem')
 };
 
-https.createServer(serverOptions, app).listen(port, '0.0.0.0', () => {
+const server = https.createServer(serverOptions, app);
+
+// Log when a secure TLS connection is established
+server.on('secureConnection', (tlsSocket) => {
+  console.log('TLS connection established');
+});
+
+// Log if there is a TLS connection error
+server.on('clientError', (err) => {
+  console.error('TLS connection failed:', err.message);
+});
+
+server.listen(port, '0.0.0.0', () => {
   console.log(`Secure server running on https://0.0.0.0:${port}`);
 });

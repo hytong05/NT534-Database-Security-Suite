@@ -9,9 +9,9 @@ export default defineConfig({
     port: 8000,
     proxy: {
       '/api': {
-        target: 'https://10.0.2.148:9000',  // backend server
+        target: 'http://10.0.2.148:9000',  // backend server
         changeOrigin: true,
-        secure: false,
+        secure: true,
       },
     },
   },
