@@ -1,12 +1,10 @@
-# ACRA - Database Security Suite
-
-## Course Information
-- **Course:** Advanced Network Security - NT534.P21.ANTN
-- **Topic:** Database Firewall
-
----
+# Acra - Database Security Suite
 
 ## Introduction
+
+<p align="center">
+  <img src="src/logo.png" alt="Logo" width="500"/>
+</p>
 
 **Acra** is an application-level encryption and data security toolkit for modern distributed applications. Acra allows app developers to encrypt sensitive data, manage the keys, apply tokenization, data masking, request filtering, generate audit logs and security events, automate reactions on security boundary.
 
@@ -16,7 +14,6 @@ Acra is written in Go, aimed for modern cloud applications that store sensitive 
 - **Acra Engineering Examples:** [https://github.com/cossacklabs/acra-engineering-demo](https://github.com/cossacklabs/acra-engineering-demo)
 - **Documentation:** [https://github.com/cossacklabs/acra-engineering-demo](https://docs.cossacklabs.com/acra/)
 
----
 
 ## System Architecture
 
@@ -24,9 +21,9 @@ Acra is written in Go, aimed for modern cloud applications that store sensitive 
 - **PostgreSQL:** Ubuntu 24.04 LTS
 - **Application:** Ubuntu 24.04 LTS
 
-![System Architecture](src/architecture.png)
-
----
+<p align="center">
+  <img src="src/architechture.png" alt="Architechture.png" width="800"/>
+</p>
 
 ## Directory Structure
 
@@ -39,5 +36,9 @@ NT534-Database-Security-Suite/
 ├── src/          
 └── README.md
 ```
+
+## Course Information
+- **Course:** Advanced Network Security - NT534.P21.ANTN
+- **Topic:** Database Firewall
 
 ---
