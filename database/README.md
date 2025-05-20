@@ -3,7 +3,7 @@
 ## 1. Introduction
 
 <p align="center">
-  <img src="./src/postgresql.png" alt="PostgreSQL_Logo" width="500"/>
+  <img src="../src/postgresql.png" alt="PostgreSQL_Logo" width="500"/>
 </p>
 
 [PostgreSQL](https://www.postgresql.org/) is a powerful, open-source object-relational database system. It is renowned for its robustness, extensibility, and standards compliance. PostgreSQL supports advanced data types, complex queries, transactional integrity, and full ACID compliance. It is suitable for both small applications and large-scale enterprise solutions, making it an excellent choice for e-commerce platforms that require reliability, security, and scalability.
