@@ -1,0 +1,44 @@
+version: 0.96.0
+defaults:
+  crypto_envelope: acrablock
+schemas:
+  - table: "users"
+    columns:
+      - username
+      - email
+      - full_name
+      - address
+      - phone_number
+    encrypted:
+      - column: "email"
+        encryption_type: "acrablock"
+        data_masking:
+          type: "partial"
+          format: "***@{domain}"
+      - column: "phone_number"
+        encryption_type: "acrablock"
+        data_masking:
+          type: "partial"
+          format: "+XX XXX XXX {last4}"
+  - table: "orders"
+    columns:
+      - order_id
+      - user_id
+      - order_day
+      - total_amount
+      - status
+  - table: "order_details"
+    columns:
+      - order_detail_id
+      - order_id
+      - product_id
+      - quantity
+      - unit_price
+  - table: "products"
+    columns:
+      - product_id
+      - name
+      - description
+      - price
+      - stock_quantity
+      - created_at
