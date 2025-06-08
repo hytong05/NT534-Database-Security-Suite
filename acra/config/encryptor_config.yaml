@@ -2,7 +2,7 @@ keystore:
   v2:
     purpose: server
     key_store_encryption_type: env_master_key
-    key_dir_path: ".acrakeys"  # Sử dụng đường dẫn tương đối
+    key_dir_path: ".acrakeys"
 
 schemas:
   - file: "/home/hytong/NT534-Database-Security-Suite/acra/config/encryption.yaml"
