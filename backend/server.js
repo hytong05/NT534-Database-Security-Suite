@@ -18,6 +18,7 @@ const pool = new Pool({
   user: 'acra_app',       // Replace with your database username
   password: 'acra2025',   // Replace with your database password
   database: 'acra_application',   // Replace with your database name
+  application_name: 'client1',
   // If you need SSL, uncomment the line below
   ssl: { 
     rejectUnauthorized: true,
