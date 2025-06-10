@@ -4,6 +4,15 @@ defaults:
   transparent_encryption: true
 schemas:
   - table: "users"
+    columns:
+      - "user_id"
+      - "username"
+      - "email"
+      - "password_hash"
+      - "full_name"
+      - "address"
+      - "phone_number"
+      - "created_at"
     encrypted:
       - column: "email"
         masking: "***@placeholder.com"
