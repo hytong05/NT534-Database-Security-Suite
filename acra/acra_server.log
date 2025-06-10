@@ -1,581 +1,656 @@
 
-time="2025-06-10T03:57:42-07:00" level=info msg="Starting service acra-server [pid=5864]" version=0.96.0
-time="2025-06-10T03:57:42-07:00" level=info msg="Validating service configuration..."
-time="2025-06-10T03:57:42-07:00" level=info msg="Load encryptor configuration from /home/hytong/NT534-Database-Security-Suite/acra/config/encryptor_config.yaml ..."
-time="2025-06-10T03:57:42-07:00" level=info msg="Encryptor configuration loaded"
-time="2025-06-10T03:57:42-07:00" level=info msg="Initialising keystore..."
-time="2025-06-10T03:57:42-07:00" level=info msg="Initializing default env ACRA_MASTER_KEY loader"
-time="2025-06-10T03:57:42-07:00" level=info msg="Keystore init OK" path=.acrakeys
-time="2025-06-10T03:57:42-07:00" level=info msg="Configuring transport..."
-time="2025-06-10T03:57:42-07:00" level=info msg="Use sni" sni=""
-time="2025-06-10T03:57:42-07:00" level=info msg="Use sni" sni=10.0.2.147
-time="2025-06-10T03:57:42-07:00" level=info msg="Loaded TLS configuration" tls_client_id_from_cert=false
-time="2025-06-10T03:57:42-07:00" level=info msg="Initialize redis db storage for tokens"
-time="2025-06-10T03:57:42-07:00" level=info msg="Initialized redis db storage for tokens"
-time="2025-06-10T03:57:42-07:00" level=info msg="Initialized SQL query parser in default mode"
-time="2025-06-10T03:57:42-07:00" level=info msg="Configured to send metrics and stats to `incoming_connection_prometheus_metrics_string`"
-time="2025-06-10T03:57:42-07:00" level=info msg="Start listening to connections. Current PID: 5864"
-time="2025-06-10T03:57:42-07:00" level=info msg="Enabling DEBUG log level"
-time="2025-06-10T03:57:42-07:00" level=info msg="Start prometheus http handler" connection_string="http://127.0.0.1:8000"
-time="2025-06-10T03:57:42-07:00" level=info msg="Create listener" connection_string="tcp://0.0.0.0:9393/" from_descriptor=false
-time="2025-06-10T03:57:42-07:00" level=info msg="Start listening connections" connection_string="tcp://0.0.0.0:9393/" from_descriptor=false
-time="2025-06-10T03:57:51-07:00" level=info msg="Got new connection to AcraServer: 10.0.2.148:50436" connection_string="tcp://0.0.0.0:9393/" from_descriptor=false
-time="2025-06-10T03:57:51-07:00" level=debug msg="ConnectionManager Added new connection"
-time="2025-06-10T03:57:51-07:00" level=info msg="Handle client's connection" client_id=client1 session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Connecting to db" client_id=client1 session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Pg db proxy" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read startup message" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="SSL allow" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Start tls proxy" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Can't read first 5 bytes" client_id=client1 code=588 error="read tcp 10.0.2.149:9393->10.0.2.148:50436: i/o timeout" proxy=client session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Stop client connection" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Init tls with client" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.148'"
-time="2025-06-10T03:57:51-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.148'"
-time="2025-06-10T03:57:51-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
-time="2025-06-10T03:57:51-07:00" level=info msg="TLS connection to db" client_id=client1 proxy=server session_id=1 use_client_id=false
-time="2025-06-10T03:57:51-07:00" level=debug msg="Init tls with db" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.147'"
-time="2025-06-10T03:57:51-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.147'"
-time="2025-06-10T03:57:51-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg=ReadyForQueryPacket client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Add pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:51-07:00" level=debug msg="New query" client_id=client1 proxy=client session_id=1 sql="select * from users"
-time="2025-06-10T03:57:51-07:00" level=debug msg=PreparedStatementsQuery.OnQuery
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=error msg="Column count in RowDescription packet not same as parsed query count of columns"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=12 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=17 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=25 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=18 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=21 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=11 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=18 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=21 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:51-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:51-07:00" level=info msg="Command complete" command=SimpleQuery
-time="2025-06-10T03:57:51-07:00" level=debug msg="Remove pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg=ReadyForQueryPacket client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
-time="2025-06-10T03:57:54-07:00" level=info msg="Got new connection to AcraServer: 10.0.2.147:48806" connection_string="tcp://0.0.0.0:9393/" from_descriptor=false
-time="2025-06-10T03:57:54-07:00" level=debug msg="ConnectionManager Added new connection"
-time="2025-06-10T03:57:54-07:00" level=info msg="Handle client's connection" client_id=client1 session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Connecting to db" client_id=client1 session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Pg db proxy" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Read startup message" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="SSL allow" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Start tls proxy" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Can't read first 5 bytes" client_id=client1 code=588 error="read tcp 10.0.2.149:9393->10.0.2.147:48806: i/o timeout" proxy=client session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Stop client connection" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Init tls with client" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.148'"
-time="2025-06-10T03:57:54-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.148'"
-time="2025-06-10T03:57:54-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
-time="2025-06-10T03:57:54-07:00" level=info msg="TLS connection to db" client_id=client1 proxy=server session_id=2 use_client_id=false
-time="2025-06-10T03:57:54-07:00" level=debug msg="Init tls with db" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.147'"
-time="2025-06-10T03:57:54-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.147'"
-time="2025-06-10T03:57:54-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
-time="2025-06-10T03:57:54-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Can't read first 5 bytes" client_id=client1 code=588 error=EOF proxy=client session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Can't read packet from client to database" client_id=client1 error=EOF proxy=client session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Stop to proxy" client_id=client1 interrupt_side=Client-AcraServer session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="EOF connection closed" client_id=client1 interrupt_side=Client-AcraServer session_id=2
-time="2025-06-10T03:57:54-07:00" level=info msg="Closing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Close acra-connector connection" client_id=client1 session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Close db connection" client_id=client1 session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Can't read packet" client_id=client1 code=588 error="read tcp 10.0.2.149:38568->10.0.2.147:5432: use of closed network connection" proxy=server session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="All connections closed" client_id=client1 session_id=2
-time="2025-06-10T03:57:54-07:00" level=debug msg="Second proxy goroutine stopped" client_id=client1 error="AcraServer-Database:read tcp 10.0.2.149:38568->10.0.2.147:5432: use of closed network connection" interrupt_side=Client-AcraServer session_id=2
-time="2025-06-10T03:57:54-07:00" level=info msg="Finished processing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=2
-time="2025-06-10T03:57:57-07:00" level=info msg="Got new connection to AcraServer: 10.0.2.147:48822" connection_string="tcp://0.0.0.0:9393/" from_descriptor=false
-time="2025-06-10T03:57:57-07:00" level=debug msg="ConnectionManager Added new connection"
-time="2025-06-10T03:57:57-07:00" level=info msg="Handle client's connection" client_id=client1 session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Connecting to db" client_id=client1 session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Pg db proxy" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read startup message" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="SSL allow" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Start tls proxy" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Can't read first 5 bytes" client_id=client1 code=588 error="read tcp 10.0.2.149:9393->10.0.2.147:48822: i/o timeout" proxy=client session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Stop client connection" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Init tls with client" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.148'"
-time="2025-06-10T03:57:57-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.148'"
-time="2025-06-10T03:57:57-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
-time="2025-06-10T03:57:57-07:00" level=info msg="TLS connection to db" client_id=client1 proxy=server session_id=3 use_client_id=false
-time="2025-06-10T03:57:57-07:00" level=debug msg="Init tls with db" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.147'"
-time="2025-06-10T03:57:57-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.147'"
-time="2025-06-10T03:57:57-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg=ReadyForQueryPacket client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Add pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:57-07:00" level=debug msg="New query" client_id=client1 proxy=client session_id=3 sql="select * from users"
-time="2025-06-10T03:57:57-07:00" level=debug msg=PreparedStatementsQuery.OnQuery
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=error msg="Column count in RowDescription packet not same as parsed query count of columns"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=12 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=17 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=25 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=18 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=21 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=11 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=18 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=21 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
-time="2025-06-10T03:57:57-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:57-07:00" level=info msg="Command complete" command=SimpleQuery
-time="2025-06-10T03:57:57-07:00" level=debug msg="Remove pending packet" packet=postgresql.queryPacket
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg=ReadyForQueryPacket client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Stop to proxy" client_id=client1 interrupt_side=Client-AcraServer session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Err == nil from proxy goroutine" client_id=client1 interrupt_side=Client-AcraServer session_id=3
-time="2025-06-10T03:57:57-07:00" level=info msg="Closing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Close acra-connector connection" client_id=client1 session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Close db connection" client_id=client1 session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Can't read packet" client_id=client1 code=588 error="read tcp 10.0.2.149:38578->10.0.2.147:5432: use of closed network connection" proxy=server session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="All connections closed" client_id=client1 session_id=3
-time="2025-06-10T03:57:57-07:00" level=debug msg="Second proxy goroutine stopped" client_id=client1 error="AcraServer-Database:read tcp 10.0.2.149:38578->10.0.2.147:5432: use of closed network connection" interrupt_side=Client-AcraServer session_id=3
-time="2025-06-10T03:57:57-07:00" level=info msg="Finished processing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=3
-time="2025-06-10T03:58:01-07:00" level=debug msg="Stop to proxy" client_id=client1 interrupt_side=Client-AcraServer session_id=1
-time="2025-06-10T03:58:01-07:00" level=debug msg="Err == nil from proxy goroutine" client_id=client1 interrupt_side=Client-AcraServer session_id=1
-time="2025-06-10T03:58:01-07:00" level=info msg="Closing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=1
-time="2025-06-10T03:58:01-07:00" level=debug msg="Close acra-connector connection" client_id=client1 session_id=1
-time="2025-06-10T03:58:01-07:00" level=debug msg="Close db connection" client_id=client1 session_id=1
-time="2025-06-10T03:58:01-07:00" level=debug msg="Can't read packet" client_id=client1 code=588 error="read tcp 10.0.2.149:47454->10.0.2.147:5432: use of closed network connection" proxy=server session_id=1
-time="2025-06-10T03:58:01-07:00" level=debug msg="All connections closed" client_id=client1 session_id=1
-time="2025-06-10T03:58:01-07:00" level=debug msg="Second proxy goroutine stopped" client_id=client1 error="AcraServer-Database:read tcp 10.0.2.149:47454->10.0.2.147:5432: use of closed network connection" interrupt_side=Client-AcraServer session_id=1
-time="2025-06-10T03:58:01-07:00" level=info msg="Finished processing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=1
+time="2025-06-10T04:26:40-07:00" level=info msg="Starting service acra-server [pid=6805]" version=0.96.0
+time="2025-06-10T04:26:40-07:00" level=info msg="Validating service configuration..."
+time="2025-06-10T04:26:40-07:00" level=info msg="Load encryptor configuration from /home/hytong/NT534-Database-Security-Suite/acra/config/encryptor_config.yaml ..."
+time="2025-06-10T04:26:40-07:00" level=info msg="Encryptor configuration loaded"
+time="2025-06-10T04:26:40-07:00" level=info msg="Initialising keystore..."
+time="2025-06-10T04:26:40-07:00" level=info msg="Initializing default env ACRA_MASTER_KEY loader"
+time="2025-06-10T04:26:40-07:00" level=info msg="Keystore init OK" path=.acrakeys
+time="2025-06-10T04:26:40-07:00" level=info msg="Configuring transport..."
+time="2025-06-10T04:26:40-07:00" level=info msg="Use sni" sni=""
+time="2025-06-10T04:26:40-07:00" level=info msg="Use sni" sni=10.0.2.147
+time="2025-06-10T04:26:40-07:00" level=info msg="Loaded TLS configuration" tls_client_id_from_cert=false
+time="2025-06-10T04:26:40-07:00" level=info msg="Initialize redis db storage for tokens"
+time="2025-06-10T04:26:40-07:00" level=info msg="Initialized redis db storage for tokens"
+time="2025-06-10T04:26:40-07:00" level=info msg="Initialized SQL query parser in default mode"
+time="2025-06-10T04:26:40-07:00" level=info msg="Configured to send metrics and stats to `incoming_connection_prometheus_metrics_string`"
+time="2025-06-10T04:26:40-07:00" level=info msg="Start listening to connections. Current PID: 6805"
+time="2025-06-10T04:26:40-07:00" level=info msg="Enabling DEBUG log level"
+time="2025-06-10T04:26:40-07:00" level=info msg="Create listener" connection_string="tcp://0.0.0.0:9393/" from_descriptor=false
+time="2025-06-10T04:26:40-07:00" level=info msg="Start prometheus http handler" connection_string="http://127.0.0.1:8000"
+time="2025-06-10T04:26:40-07:00" level=info msg="Start listening connections" connection_string="tcp://0.0.0.0:9393/" from_descriptor=false
+time="2025-06-10T04:27:51-07:00" level=info msg="Got new connection to AcraServer: 10.0.2.148:50356" connection_string="tcp://0.0.0.0:9393/" from_descriptor=false
+time="2025-06-10T04:27:51-07:00" level=debug msg="ConnectionManager Added new connection"
+time="2025-06-10T04:27:51-07:00" level=info msg="Handle client's connection" client_id=client1 session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Connecting to db" client_id=client1 session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Pg db proxy" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read startup message" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="SSL allow" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Start tls proxy" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Can't read first 5 bytes" client_id=client1 code=588 error="read tcp 10.0.2.149:9393->10.0.2.148:50356: i/o timeout" proxy=client session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Stop client connection" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Init tls with client" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.148'"
+time="2025-06-10T04:27:51-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.148'"
+time="2025-06-10T04:27:51-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
+time="2025-06-10T04:27:51-07:00" level=info msg="TLS connection to db" client_id=client1 proxy=server session_id=1 use_client_id=false
+time="2025-06-10T04:27:51-07:00" level=debug msg="Init tls with db" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.147'"
+time="2025-06-10T04:27:51-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.147'"
+time="2025-06-10T04:27:51-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg=ReadyForQueryPacket client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Add pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:51-07:00" level=debug msg="New query" client_id=client1 proxy=client session_id=1 sql="insert into users(username, email, password_hash, full_name, address, phone_number) values (:replaced1, :replaced2, :replaced3, :replaced4, :replaced5, :replaced6)"
+time="2025-06-10T04:27:51-07:00" level=debug msg=PreparedStatementsQuery.OnQuery
+time="2025-06-10T04:27:51-07:00" level=debug msg="Hasn't schema for table users"
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:51-07:00" level=info msg="Command complete" command=SimpleQuery
+time="2025-06-10T04:27:51-07:00" level=debug msg="Remove pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg=ReadyForQueryPacket client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:51-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Add pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:58-07:00" level=debug msg="New query" client_id=client1 proxy=client session_id=1 sql="select * from users"
+time="2025-06-10T04:27:58-07:00" level=debug msg=PreparedStatementsQuery.OnQuery
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=error msg="Column count in RowDescription packet not same as parsed query count of columns"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=12 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=17 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=25 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=18 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=21 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=11 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=18 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=21 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=9 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=23 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:27:58-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:58-07:00" level=info msg="Command complete" command=SimpleQuery
+time="2025-06-10T04:27:58-07:00" level=debug msg="Remove pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg=ReadyForQueryPacket client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:27:58-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=1
+time="2025-06-10T04:28:08-07:00" level=debug msg="Stop to proxy" client_id=client1 interrupt_side=Client-AcraServer session_id=1
+time="2025-06-10T04:28:08-07:00" level=debug msg="Can't read packet" client_id=client1 code=588 error=EOF proxy=server session_id=1
+time="2025-06-10T04:28:08-07:00" level=debug msg="Err == nil from proxy goroutine" client_id=client1 interrupt_side=Client-AcraServer session_id=1
+time="2025-06-10T04:28:08-07:00" level=info msg="Closing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=1
+time="2025-06-10T04:28:08-07:00" level=debug msg="Close acra-connector connection" client_id=client1 session_id=1
+time="2025-06-10T04:28:08-07:00" level=debug msg="Close db connection" client_id=client1 session_id=1
+time="2025-06-10T04:28:08-07:00" level=debug msg="All connections closed" client_id=client1 session_id=1
+time="2025-06-10T04:28:08-07:00" level=debug msg="Second proxy goroutine stopped" client_id=client1 error="AcraServer-Database:EOF" interrupt_side=Client-AcraServer session_id=1
+time="2025-06-10T04:28:08-07:00" level=info msg="Finished processing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=1
+time="2025-06-10T04:28:08-07:00" level=info msg="Got new connection to AcraServer: 10.0.2.147:54386" connection_string="tcp://0.0.0.0:9393/" from_descriptor=false
+time="2025-06-10T04:28:08-07:00" level=debug msg="ConnectionManager Added new connection"
+time="2025-06-10T04:28:08-07:00" level=info msg="Handle client's connection" client_id=client1 session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Connecting to db" client_id=client1 session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Pg db proxy" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Read startup message" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="SSL allow" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Start tls proxy" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Can't read first 5 bytes" client_id=client1 code=588 error="read tcp 10.0.2.149:9393->10.0.2.147:54386: i/o timeout" proxy=client session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Stop client connection" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Init tls with client" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.148'"
+time="2025-06-10T04:28:08-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.148'"
+time="2025-06-10T04:28:08-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
+time="2025-06-10T04:28:08-07:00" level=info msg="TLS connection to db" client_id=client1 proxy=server session_id=2 use_client_id=false
+time="2025-06-10T04:28:08-07:00" level=debug msg="Init tls with db" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.147'"
+time="2025-06-10T04:28:08-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.147'"
+time="2025-06-10T04:28:08-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
+time="2025-06-10T04:28:08-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Can't read first 5 bytes" client_id=client1 code=588 error=EOF proxy=client session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Can't read packet from client to database" client_id=client1 error=EOF proxy=client session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Stop to proxy" client_id=client1 interrupt_side=Client-AcraServer session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="EOF connection closed" client_id=client1 interrupt_side=Client-AcraServer session_id=2
+time="2025-06-10T04:28:08-07:00" level=info msg="Closing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Close acra-connector connection" client_id=client1 session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Close db connection" client_id=client1 session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Can't read packet" client_id=client1 code=588 error="read tcp 10.0.2.149:50172->10.0.2.147:5432: use of closed network connection" proxy=server session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="All connections closed" client_id=client1 session_id=2
+time="2025-06-10T04:28:08-07:00" level=debug msg="Second proxy goroutine stopped" client_id=client1 error="AcraServer-Database:read tcp 10.0.2.149:50172->10.0.2.147:5432: use of closed network connection" interrupt_side=Client-AcraServer session_id=2
+time="2025-06-10T04:28:08-07:00" level=info msg="Finished processing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=2
+time="2025-06-10T04:28:12-07:00" level=info msg="Got new connection to AcraServer: 10.0.2.147:54398" connection_string="tcp://0.0.0.0:9393/" from_descriptor=false
+time="2025-06-10T04:28:12-07:00" level=debug msg="ConnectionManager Added new connection"
+time="2025-06-10T04:28:12-07:00" level=info msg="Handle client's connection" client_id=client1 session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Connecting to db" client_id=client1 session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Pg db proxy" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read startup message" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="SSL allow" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Start tls proxy" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Can't read first 5 bytes" client_id=client1 code=588 error="read tcp 10.0.2.149:9393->10.0.2.147:54398: i/o timeout" proxy=client session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Stop client connection" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Init tls with client" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.148'"
+time="2025-06-10T04:28:12-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.148'"
+time="2025-06-10T04:28:12-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
+time="2025-06-10T04:28:12-07:00" level=info msg="TLS connection to db" client_id=client1 proxy=server session_id=3 use_client_id=false
+time="2025-06-10T04:28:12-07:00" level=debug msg="Init tls with db" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OCSP: Verifying 'CN=10.0.2.147'"
+time="2025-06-10T04:28:12-07:00" level=debug msg="CRL: Verifying 'CN=10.0.2.147'"
+time="2025-06-10T04:28:12-07:00" level=debug msg=verifyPeerCertificate error="<nil>" valid=true
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg=ProxyClientConnection client_id=client1 proxy=client session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg=ReadyForQueryPacket client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=client session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Add pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:28:12-07:00" level=debug msg="New query" client_id=client1 proxy=client session_id=3 sql="select * from users"
+time="2025-06-10T04:28:12-07:00" level=debug msg=PreparedStatementsQuery.OnQuery
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=error msg="Column count in RowDescription packet not same as parsed query count of columns"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=12 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=17 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=25 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=18 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=21 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=11 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=18 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=10 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=21 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Matched data row packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=0 data_length=1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=1 data_length=5 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=2 data_length=36 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=3 data_length=16 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=4 data_length=9 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=5 data_length=23 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=6 data_length=22 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Process columns data" client_id=client1 column_index=7 data_length=26 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt SerializedContainer"
+time="2025-06-10T04:28:12-07:00" level=debug msg="OnColumn: Try to decrypt AcraBlock"
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Return pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:28:12-07:00" level=info msg="Command complete" command=SimpleQuery
+time="2025-06-10T04:28:12-07:00" level=debug msg="Remove pending packet" packet=postgresql.queryPacket
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data length" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read data" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg=ReadyForQueryPacket client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Read packet" client_id=client1 proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Stop to proxy" client_id=client1 interrupt_side=Client-AcraServer session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Err == nil from proxy goroutine" client_id=client1 interrupt_side=Client-AcraServer session_id=3
+time="2025-06-10T04:28:12-07:00" level=info msg="Closing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Close acra-connector connection" client_id=client1 session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Close db connection" client_id=client1 session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Can't read packet" client_id=client1 code=588 error="read tcp 10.0.2.149:50186->10.0.2.147:5432: use of closed network connection" proxy=server session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="All connections closed" client_id=client1 session_id=3
+time="2025-06-10T04:28:12-07:00" level=debug msg="Second proxy goroutine stopped" client_id=client1 error="AcraServer-Database:read tcp 10.0.2.149:50186->10.0.2.147:5432: use of closed network connection" interrupt_side=Client-AcraServer session_id=3
+time="2025-06-10T04:28:12-07:00" level=info msg="Finished processing client's connection" client_id=client1 interrupt_side=Client-AcraServer session_id=3
