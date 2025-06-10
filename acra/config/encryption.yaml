@@ -15,10 +15,18 @@ schemas:
       - "created_at"
     encrypted:
       - column: "email"
+        data_type: "bytea"  # Chỉ định kiểu dữ liệu là bytea cho PostgreSQL
+        encryption:
+          type: "acrablock"
+          source_data_type: "varchar"  # Kiểu dữ liệu nguồn ban đầu
         masking: "***@placeholder.com"
         plaintext_length: 0
         plaintext_side: left
       - column: "phone_number"
+        data_type: "bytea"  # Chỉ định kiểu dữ liệu là bytea cho PostgreSQL
+        encryption:
+          type: "acrablock"
+          source_data_type: "varchar"  # Kiểu dữ liệu nguồn ban đầu
         masking: "+XX XXX XXX "
         plaintext_length: 4
         plaintext_side: right
